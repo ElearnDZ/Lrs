@@ -25,7 +25,7 @@ class RegisterController extends BaseController
     public function __construct(User $user)
     {
         $this->user = $user;
-        $this->middleware('guest');
+        //$this->middleware('guest');
         $this->middleware('registration.status');
     }
 

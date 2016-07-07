@@ -503,13 +503,13 @@ App::error(function(Exception $exception) {
 });*/
 
 
-Event::listen('user.login', 'App\Locker\Listeners\LoginHandler');
+//Event::listen('user.login', 'App\Locker\Listeners\LoginHandler');
 
 //Event::listen('user.domain_check', 'App\Locker\Listeners\RegisterHandler@domain_check');
 
 //Event::listen('user.register', 'App\Locker\Listeners\RegisterHandler');
 
-Event::listen('user.email_resend', 'App\Locker\Listeners\RegisterHandler@resentEmailVerification');
+//Event::listen('user.email_resend', 'App\Locker\Listeners\RegisterHandler@resentEmailVerification');
 
 // Adds a Client for the LRS when the LRS is created.
 /*Event::listen('Lrs.store', function ($opts) {

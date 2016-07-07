@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use App\Models\Site;
 use Closure;
+use Illuminate\Support\Facades\Redirect;
 
 class RegistrationStatusAuthenticete
 {
