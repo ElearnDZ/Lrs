@@ -19,7 +19,7 @@ class SiteSuperUserId extends Migration
       foreach ($site['super'] as $key => $supers) {
         $sites->update(
           ['_id' => $site['_id']],
-          ['$set' => ["super.$key.user" => new MongoId($supers['user'])]],
+          ['$set' => ["super.$key.user" => new MongoDB\BSON\ObjectID($supers['user'])]],
           ['multiple' => true]
         ); 
       }
