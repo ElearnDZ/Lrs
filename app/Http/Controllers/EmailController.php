@@ -26,7 +26,7 @@ class EmailController extends BaseController
     {
 
         $this->user = $user;
-        /*$this->beforeFilter('auth', array('except' => array('index', 'show', 'verifyEmail', 'inviteEmail')));*/
+        $this->middleware('auth', array('except' => array('index', 'show', 'verifyEmail', 'inviteEmail')));
 
     }
 
@@ -80,18 +80,23 @@ class EmailController extends BaseController
     {
 
         $message = $this->user->verifyEmail($token);
+
         //now login and direct to password reset form
         $email = \DB::table('user_tokens')
             ->where('token', $token)
             ->pluck('email');
-        $user = \User::where('email', $email)->first();
-        if (!isset($user->_id)) \App::abort(404, 'Your email verification link has expired - please request a new one. ');
-        Auth::loginUsingId($user->_id);
-        \DB::table('user_tokens')
-            ->where('token', $token)
-            ->delete();
-        return Redirect::to('/users/' . $user->_id . '/add/password');
-
+        if(count($email)==1) {
+            $user = \App\Models\User::where('email', $email[0])->first();
+            if (!isset($user->_id)) \App::abort(404, 'Your email verification link has expired - please request a new one. ');
+            \Auth::loginUsingId($user->_id);
+            \DB::table('user_tokens')
+                ->where('token', $token)
+                ->delete();
+            return Redirect::to('/users/' . $user->_id . '/add/password');
+        }
+        else{
+            \App::abort(404, 'Your email verification link has expired - please request a new one. ');
+        }
     }
 
 

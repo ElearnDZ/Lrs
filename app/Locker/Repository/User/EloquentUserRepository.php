@@ -2,6 +2,7 @@
 
 namespace App\Locker\Repository\User;
 
+use App\Models\Lrs;
 use App\Models\User;
 
 class EloquentUserRepository implements UserRepository
@@ -65,7 +66,7 @@ class EloquentUserRepository implements UserRepository
 
         if ($email) {
             //verify email
-            \User::where('email', $email)->update(array('verified' => 'yes'));
+            User::where('email', $email)->update(array('verified' => 'yes'));
             $message_type = 'success';
             $message = \Lang::get('users.email_verified');
         } else {
@@ -79,11 +80,13 @@ class EloquentUserRepository implements UserRepository
 
     public function updateRole($user, $role)
     {
-
-        $user = $this->find($user);
-        $user->role = $role;
-        return $user->save();
-
+        $current_user = \Auth::user();
+        if(strcmp($current_user->_id,$user)!=0){
+            $user = $this->find($user);
+            $user->role = $role;
+            return $user->save();
+        }
+        return false;
     }
 
     public function updatePassword($id, $password)
@@ -102,10 +105,10 @@ class EloquentUserRepository implements UserRepository
         $user = $this->find($id);
 
         //get a super admin user
-        $super = \User::where('role', 'super')->first();
+        $super = User::where('role', 'super')->first();
 
         //get all LRSs owned by user being deleted
-        $get_lrs = \Lrs::where('owner_id', $id)->get();
+        $get_lrs = Lrs::where('owner_id', $id)->get();
 
         //do LRS exists?
         if ($get_lrs) {

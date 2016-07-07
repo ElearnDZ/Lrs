@@ -110,7 +110,7 @@ class EloquentRepository extends BaseRepository implements Repository
         if ($opts['user']->role === 'super') {
             $query = $this->where($opts);
         } else {
-            $query = $this->where([])->where('users._id', $opts['user']->_id)->remember(10);
+            $query = $this->where([])->where('users._id', $opts['user']->_id);
         }
 
         $obj_result = $query->get()->sortBy(function (Model $model) {

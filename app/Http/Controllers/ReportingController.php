@@ -55,9 +55,9 @@ class ReportingController extends BaseController
     {
         $this->lrs = $lrs;
         $this->report = $report;
-        /*$this->beforeFilter('auth');
-        $this->beforeFilter('auth.lrs');
-        $this->beforeFilter('csrf', array('only' => array('update', 'store', 'destroy')));*/
+        $this->middleware('auth');
+         $this->middleware('auth.lrs');
+        $this->middleware('csrf', array('only' => array('update', 'store', 'destroy')));
     }
 
     private function getLrs($lrs_id)

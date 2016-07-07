@@ -34,11 +34,11 @@ class User
 
         $token = User::setEmailToken($user, $user->email);
         $emailData = array('url' => URL::to('email/verify', array($token)));
-
-        /* Mail::send(['emails.verifyHtml', 'emails.verifyPlain'], $emailData, function($message) use ($user){
-           $message->to($user->email, $user->name)->subject('Welcome, please verify your email');
-         });*/
-
+        if(strcmp(config('mail.service'),'on')==0) {
+            Mail::send(['emails.verifyHtml', 'emails.verifyPlain'], $emailData, function ($message) use ($user) {
+                $message->to($user->email, $user->name)->subject('Welcome, please verify your email');
+            });
+        }
     }
 
     /**
@@ -83,7 +83,7 @@ class User
                 //was an LRS id passed? If so, add user to that LRS as an observer
                 if (isset($data['lrs'])) {
 
-                    $lrs = Lrs::find($data['lrs']);
+                    $lrs = \App\Models\Lrs::find($data['lrs']);
 
                     //is the user already a member of the LRS?
                     $isMember = Lrs::isMember($lrs->_id, $user->_id);
@@ -111,10 +111,12 @@ class User
                 if ($user_exists && isset($lrs)) {
                     //set data to use in email
                     $emailData = array('sender' => Auth::user(), 'lrs' => $lrs, 'url' => URL() . "/lrs/$lrs->_id");
-                    //send out message to user
-                    Mail::send(['emails.lrsInviteHtml', 'emails.lrsInvitePlain'], $emailData, function ($message) use ($user) {
-                        $message->to($user->email, $user->name)->subject('You have been added to an LRS.');
-                    });
+                    if(strcmp(config('mail.service'),'on')==0) {
+                        //send out message to user
+                        Mail::send(['emails.lrsInviteHtml', 'emails.lrsInvitePlain'], $emailData, function ($message) use ($user) {
+                            $message->to($user->email, $user->name)->subject('You have been added to an LRS.');
+                        });
+                    }
                 } elseif ($user_exists) {
                     //do nothing as they are already in the system
                 } else {
@@ -128,11 +130,12 @@ class User
                         'title' => $title,
                         'sender' => Auth::user());
 
-                    //send out message to user
-                    \Mail::send(['emails.inviteHtml', 'emails.invitePlain'], $emailData, function ($message) use ($user) {
-                        $message->to($user->email, $user->name)->subject('You have been invited to join our LRS.');
-                    });
-
+                    if(strcmp(config('mail.service'),'on')==0) {
+                        //send out message to user
+                        Mail::send(['emails.inviteHtml', 'emails.invitePlain'], $emailData, function ($message) use ($user) {
+                            $message->to($user->email, $user->name)->subject('You have been invited to join our LRS.');
+                        });
+                    }
                 }
 
             }

@@ -37,5 +37,11 @@ class Kernel extends HttpKernel
         'check-authorization-params' => \LucaDegasperi\OAuth2Server\Middleware\CheckAuthCodeRequestMiddleware::class,
         'auth.statement' => \App\Http\Middleware\AuthenticateStatement::class,
         'registration.status' => \App\Http\Middleware\RegistrationStatusAuthenticete::class,
+        'user.delete' => \App\Http\Middleware\UserDelete::class,
+        'edit.lrs' => \App\Http\Middleware\EditLRS::class,
+        'create.lrs'=>\App\Http\Middleware\CreateLRS::class,
+        'auth.lrs'=>\App\Http\Middleware\AuthenticateLRS::class,
+        'auth.admin'=>\App\Http\Middleware\AuthenticateAdmin::class,
+        'auth.super'=>\App\Http\Middleware\AuthenticateSuper::class,
     ];
 }

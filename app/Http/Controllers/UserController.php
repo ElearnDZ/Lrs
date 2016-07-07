@@ -23,10 +23,10 @@ class UserController extends BaseController
         $this->lrs = $lrs;
         $this->logged_in_user = \Auth::user();
 
-        $this->beforeFilter('auth', ['except' => ['verifyEmail']]);
-        $this->beforeFilter('csrf', ['only' => ['update', 'updateRole', 'destroy']]);
-        $this->beforeFilter('user.delete', ['only' => 'destroy']);
-        $this->beforeFilter('auth.super', ['only' => ['updateRole', 'index']]);
+        $this->middleware('auth', ['except' => ['verifyEmail']]);
+        $this->middleware('csrf', ['only' => ['update', 'updateRole', 'destroy']]);
+        $this->middleware('user.delete', ['only' => 'destroy']);
+        /* $this->beforeFilter('auth.super', ['only' => ['updateRole', 'index']]);*/
     }
 
     /**
@@ -100,6 +100,7 @@ class UserController extends BaseController
      */
     public function updateRole($id, $role)
     {
+
         $s = $this->user->updateRole($id, $role);
         return \Response::json($s);
     }

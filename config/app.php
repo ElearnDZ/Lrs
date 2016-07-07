@@ -156,8 +156,8 @@ return [
         JsLocalization\JsLocalizationServiceProvider::class,
         Philo\Translate\TranslateServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
-        
-       // App\Locker\Session\SessionServiceProvider::class,
+
+        Mariuzzo\LaravelJsLocalization\LaravelJsLocalizationServiceProvider::class,
         App\Locker\Repository\RepositoryServiceProvider::class,
         App\Locker\Data\DataServiceProvider::class,
         App\Locker\Graphing\GraphServiceProvider::class,

@@ -18,7 +18,8 @@
     "philo/laravel-translate": "2.0.x",
     "seld/jsonlint": "^1.4",
     "lucadegasperi/oauth2-server-laravel": "5.1.*",
-    "laravelcollective/html": "5.1.*"
+    "laravelcollective/html": "5.1.*",
+    "mariuzzo/laravel-js-localization": "1.2.*"
   },
   "require-dev": {
     "fzaninotto/faker": "~1.4",

@@ -21,6 +21,10 @@ class EventServiceProvider extends ServiceProvider
             'App\Listeners\UserRegisterFired'],
         'App\Events\LrsStore' => [
             'App\Listeners\LrsStoreFired'],
+        'App\Events\LrsDestroy' => [
+            'App\Listeners\LrsDestroyFired'],
+        'App\Events\UserEmailResend' => [
+            'App\Listeners\UserEmailResendFired'],
     ];
 
     /**

@@ -49,6 +49,8 @@ class UserRegisterFired
     }
 
     private function sendEmail( $user ){
-        \App\Locker\Helpers\User::sendEmailValidation( $user );
+        if(strcmp(config('mail.service'),'on')==0) {
+            \App\Locker\Helpers\User::sendEmailValidation($user);
+        }
     }
 }

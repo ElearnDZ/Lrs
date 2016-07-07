@@ -108,8 +108,8 @@ Route::post('password/reset/{token}', array(
 |------------------------------------------------------------------
 */
 Route::post('email/resend', function () {
-    Event::fire('user.email_resend', array(Auth::user()));
-    return Redirect::back()->with('success', Lang::get('users.verify_request'));
+    \Event::fire(new \App\Events\UserEmailResend(\Auth::user()));
+    return \Redirect::back()->with('success', \Lang::get('users.verify_request'));
 });
 Route::get('email/verify/{token}', array(
     'uses' => 'EmailController@verifyEmail',

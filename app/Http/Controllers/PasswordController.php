@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 
 use App\Locker\Repository\User\UserRepository as User;
+use App\Models\Lrs;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Input;
@@ -22,7 +23,7 @@ class PasswordController extends BaseController
     public function __construct(User $user)
     {
         $this->user = $user;
-       // $this->beforeFilter('auth', array('only' => array('addPasswordForm', 'addPassword', 'updatePassword')));
+        $this->middleware('auth', array('only' => array('addPasswordForm', 'addPassword', 'updatePassword')));
     }
 
     public function remind()

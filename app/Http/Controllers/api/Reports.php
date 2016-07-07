@@ -43,7 +43,7 @@ class Reports extends Resources
     {
         $report = $this->repo->show($id, $this->getOptions());
         $data = $this->query->aggregateTime($this->getOptions(), $report->match);
-        return IlluminateResponse::json($data['result']);
+        return IlluminateResponse::json($data);
     }
 
 }

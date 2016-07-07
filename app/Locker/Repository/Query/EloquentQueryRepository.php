@@ -97,7 +97,7 @@ class EloquentQueryRepository implements QueryRepository
         $cache_key = sha1(json_encode($pipeline));
         $create_cache = function () use ($pipeline, $cache_key) {
             $expiration = Carbon::now()->addMinutes(10);
-            $result = Helpers::replaceHtmlEntity($this->db->statements->aggregate($pipeline), true);
+            $result = Helpers::replaceHtmlEntity($this->db->statements->aggregate($pipeline)->toArray(), true);
             IlluminateCache::put($cache_key, $result, $expiration);
             return $result;
         };
@@ -251,7 +251,7 @@ class EloquentQueryRepository implements QueryRepository
      */
     public function selectStatementDocs($lrs = '', $filter, $raw = false, $sections = [])
     {
-        $statements = \Statement::where('lrs_id', $lrs);
+        $statements = Statement::where('lrs_id', $lrs);
 
         if (!empty($filter)) {
 

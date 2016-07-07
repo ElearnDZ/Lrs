@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3f32433c25d2fc20894a64fe9a94c5df",
-    "content-hash": "4be69e565d783615aa3f423895788262",
+    "hash": "14be690bd2e019cddf9ae1cddb42ce4a",
+    "content-hash": "8865ecf6f5700d59edfd77f00fbc691f",
     "packages": [
         {
             "name": "andywer/js-localization",
@@ -64,20 +64,20 @@
         },
         {
             "name": "barryvdh/laravel-cors",
-            "version": "v0.8.0",
+            "version": "v0.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/barryvdh/laravel-cors.git",
-                "reference": "39975d7505757488f982ca132bcd02c704792fd8"
+                "reference": "1998c8c7295d167cb744bbc45fbefad9b86b836c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/barryvdh/laravel-cors/zipball/39975d7505757488f982ca132bcd02c704792fd8",
-                "reference": "39975d7505757488f982ca132bcd02c704792fd8",
+                "url": "https://api.github.com/repos/barryvdh/laravel-cors/zipball/1998c8c7295d167cb744bbc45fbefad9b86b836c",
+                "reference": "1998c8c7295d167cb744bbc45fbefad9b86b836c",
                 "shasum": ""
             },
             "require": {
-                "illuminate/support": "5.1.x|5.2.x",
+                "illuminate/support": "5.1.x|5.2.x|5.3.x",
                 "php": ">=5.5.9",
                 "symfony/http-foundation": "~2.7|~3.0",
                 "symfony/http-kernel": "~2.7|~3.0"
@@ -113,7 +113,7 @@
                 "crossdomain",
                 "laravel"
             ],
-            "time": "2016-02-11 18:38:09"
+            "time": "2016-06-22 06:36:34"
         },
         {
             "name": "classpreloader/classpreloader",
@@ -521,51 +521,6 @@
                 "mongodb"
             ],
             "time": "2016-03-04 21:34:41"
-        },
-        {
-            "name": "jenssegers/mongodb-session",
-            "version": "v1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/jenssegers/laravel-mongodb-session.git",
-                "reference": "45d9ec0032971221070a2021c17f4f5403f5f466"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/jenssegers/laravel-mongodb-session/zipball/45d9ec0032971221070a2021c17f4f5403f5f466",
-                "reference": "45d9ec0032971221070a2021c17f4f5403f5f466",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/session": "4.*|5.*",
-                "jenssegers/mongodb": "*",
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Jenssegers\\Mongodb\\Session": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jens Segers",
-                    "homepage": "http://jenssegers.be"
-                }
-            ],
-            "description": "A MongoDB session driver for Laravel 4",
-            "keywords": [
-                "driver",
-                "laravel",
-                "mongo",
-                "mongodb",
-                "session"
-            ],
-            "time": "2015-01-30 14:14:09"
         },
         {
             "name": "jeremeamia/SuperClosure",
@@ -1100,6 +1055,76 @@
                 "server"
             ],
             "time": "2016-01-29 13:11:59"
+        },
+        {
+            "name": "mariuzzo/laravel-js-localization",
+            "version": "v1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rmariuzzo/Laravel-JS-Localization.git",
+                "reference": "56dbb63008db90b0c40cc9c13f97c66395e8a93a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rmariuzzo/Laravel-JS-Localization/zipball/56dbb63008db90b0c40cc9c13f97c66395e8a93a",
+                "reference": "56dbb63008db90b0c40cc9c13f97c66395e8a93a",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "5.1.*",
+                "php": ">=5.5.9",
+                "tedivm/jshrink": "1.0.*"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.9.*",
+                "phpunit/phpunit": "4.0.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Mariuzzo\\LaravelJsLocalization\\": "src/Mariuzzo/LaravelJsLocalization/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rubens Mariuzzo",
+                    "email": "rubens@mariuzzo.com",
+                    "homepage": "https://github.com/rmariuzzo",
+                    "role": "Developer"
+                },
+                {
+                    "name": "German Popoter",
+                    "email": "me@gpopoteur.com",
+                    "homepage": "https://github.com/gpopoteur",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Galievskiy Dmitriy",
+                    "homepage": "https://github.com/xAockd",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Ramon Ackermann",
+                    "homepage": "https://github.com/sboo",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Laravel Localization in JavaScript",
+            "homepage": "https://github.com/rmariuzzo/laravel-js-localization",
+            "keywords": [
+                "JS",
+                "i18n",
+                "javascript",
+                "lang",
+                "laravel",
+                "laravel 5",
+                "localization"
+            ],
+            "time": "2015-06-29 02:42:18"
         },
         {
             "name": "mongodb/mongodb",
@@ -2558,6 +2583,52 @@
                 "dump"
             ],
             "time": "2016-06-28 06:24:06"
+        },
+        {
+            "name": "tedivm/jshrink",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tedious/JShrink.git",
+                "reference": "7575d9d96f113bc7c1c28ec8231ee086751a9078"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tedious/JShrink/zipball/7575d9d96f113bc7c1c28ec8231ee086751a9078",
+                "reference": "7575d9d96f113bc7c1c28ec8231ee086751a9078",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "fabpot/php-cs-fixer": "0.4.0",
+                "phpunit/phpunit": "4.0.*",
+                "satooshi/php-coveralls": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "JShrink": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Robert Hafner",
+                    "email": "tedivm@tedivm.com"
+                }
+            ],
+            "description": "Javascript Minifier built in PHP",
+            "homepage": "http://github.com/tedious/JShrink",
+            "keywords": [
+                "javascript",
+                "minifier"
+            ],
+            "time": "2014-11-11 03:54:14"
         },
         {
             "name": "vlucas/phpdotenv",

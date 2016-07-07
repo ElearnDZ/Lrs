@@ -22,7 +22,7 @@
     <h1>{!! Lang::get('exporting.title') !!}</h1>
   </div>
 
-  <div id="content"></div>
+  <div id="content">    </div>
 
   <script data-main="{!! URL() !!}/assets/js/exports/config" src="{!! URL() !!}/assets/js/libs/require/require.js"></script>
 @stop
