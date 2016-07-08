@@ -1,8 +1,8 @@
 <?php namespace App\Locker\Repository\Statement;
 
 use App\Locker\Helpers\Exceptions as Exceptions;
-use App\Locker\XApi\Statement as XApiStatement;
-use \Illuminate\Database\Eloquent\Model as Model;
+use Locker\XApi\Statement as XApiStatement;
+use Jenssegers\Mongodb\Eloquent\Model as Model;
 
 interface ShowerInterface
 {

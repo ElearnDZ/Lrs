@@ -162,6 +162,7 @@ return [
         App\Locker\Data\DataServiceProvider::class,
         App\Locker\Graphing\GraphServiceProvider::class,
         App\Locker\RequestServiceProvider::class,
+        Jenssegers\Mongodb\Auth\PasswordResetServiceProvider::class,
 
     ],
 

@@ -1,6 +1,6 @@
 <?php namespace App\Locker\Repository\Document;
 
-use \DocumentAPI;
+use App\Models\DocumentAPI;
 use \Carbon\Carbon;
 use App\Locker\Helpers\Exceptions as Exceptions;
 

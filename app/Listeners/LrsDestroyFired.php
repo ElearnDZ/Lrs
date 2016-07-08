@@ -2,7 +2,7 @@
 
 namespace App\Listeners;
 
-use App\Events\LrsStore;
+use App\Events\LrsDestroy;
 use App\Locker\Repository\Client\EloquentRepository;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -29,7 +29,6 @@ class LrsDestroyFired
     {
         $repo = new EloquentRepository();
         $repo->store([], ['lrs_id' => $event->modelID]);
-        
         $clients = $repo->index(['lrs_id' => $event->modelID]);
         foreach ($clients as $client) {
             $repo->destroy($client->_id, ['lrs_id' => $event->modelID]);

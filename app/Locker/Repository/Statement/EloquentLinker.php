@@ -1,6 +1,6 @@
 <?php namespace App\Locker\Repository\Statement;
 
-use \Illuminate\Database\Eloquent\Model as Model;
+use Jenssegers\Mongodb\Eloquent\Model as Model;
 use \Illuminate\Database\Eloquent\Collection as Collection;
 use App\Locker\Helpers\Helpers as Helpers;
 use Carbon\Carbon as Carbon;

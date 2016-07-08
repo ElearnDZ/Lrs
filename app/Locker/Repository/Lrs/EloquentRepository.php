@@ -1,7 +1,7 @@
 <?php namespace App\Locker\Repository\Lrs;
 
 use App\Models\Lrs;
-use \Illuminate\Database\Eloquent\Model as Model;
+use Jenssegers\Mongodb\Eloquent\Model as Model;
 use App\Locker\Repository\Base\EloquentRepository as BaseRepository;
 use Locker\XApi\Helpers as XAPIHelpers;
 use App\Locker\Helpers\Helpers as Helpers;

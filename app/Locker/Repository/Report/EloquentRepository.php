@@ -2,7 +2,7 @@
 
 use App\Models\Report;
 use App\Models\Statement;
-use \Illuminate\Database\Eloquent\Model as Model;
+use Jenssegers\Mongodb\Eloquent\Model as Model;
 use App\Locker\Repository\Base\EloquentRepository as BaseRepository;
 use App\Locker\Repository\Query\EloquentQueryRepository as QueryRepository;
 use Locker\XApi\Helpers as XAPIHelpers;

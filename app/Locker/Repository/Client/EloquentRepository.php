@@ -2,7 +2,7 @@
 
 use App\Locker\Helpers\Exceptions\NotFound;
 use App\Models\Client;
-use \Illuminate\Database\Eloquent\Model as Model;
+use Jenssegers\Mongodb\Eloquent\Model as Model;
 use App\Locker\Repository\Base\EloquentRepository as BaseRepository;
 use Locker\XApi\Authority as XApiAuthority;
 use App\Locker\Helpers\Helpers as Helpers;
@@ -143,7 +143,7 @@ class EloquentRepository extends BaseRepository implements Repository
      */
     public function show($id, array $opts)
     {
-        $opts['lrs_id'] = new \MongoDB\BSON\ObjectID($opts['lrs_id']);
+       // $opts['lrs_id'] = new \MongoDB\BSON\ObjectID($opts['lrs_id']);
         return parent::show($id, $opts);
     }
 

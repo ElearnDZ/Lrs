@@ -4,7 +4,7 @@ use App\Events\LrsDestroy;
 use App\Events\LrsStore;
 use App\Locker\Helpers\Exceptions as Exceptions;
 use App\Models\Lrs;
-use \Illuminate\Database\Eloquent\Model as Model;
+use Jenssegers\Mongodb\Eloquent\Model as Model;
 
 abstract class EloquentRepository implements Repository
 {
@@ -45,17 +45,26 @@ abstract class EloquentRepository implements Repository
                         \Event::fire(new LrsStore($extra['model']->id));
                     }
                 }
+            }
+        }
+        if (is_null($allow)) {
+            if (isset($extra['model'])) {
+                //get the class name of the model.
+                $class_name = get_class($extra['model']);
                 //for destroy event
                 if ($event == "destroy") {
+
 
                     //fire lrs destroy event
                     if (strcmp($class_name, Lrs::class) == 0) {
                         \Event::fire(new LrsDestroy($extra['id']));
                     }
-                }
 
+                    $allow = true;
+                }
             }
         }
+
         return $allow;
     }
 

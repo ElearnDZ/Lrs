@@ -2,9 +2,9 @@
 
 use App\Locker\Helpers\Exceptions as Exceptions;
 use App\Locker\Helpers\Helpers as Helpers;
-use App\Locker\XApi\Helpers as XApiHelpers;
-use \Jenssegers\Mongodb\Eloquent\Builder as Builder;
-use \Illuminate\Database\Eloquent\Model as Model;
+use Locker\XApi\Helpers as XApiHelpers;
+use Jenssegers\Mongodb\Eloquent\Builder as Builder;
+use Jenssegers\Mongodb\Eloquent\Model as Model;
 use Carbon\Carbon as Carbon;
 use MongoDate;
 

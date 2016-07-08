@@ -2,7 +2,7 @@
 
 use App\Models\Statement;
 use DB;
-use \Illuminate\Database\Eloquent\Model as Model;
+use Jenssegers\Mongodb\Eloquent\Model as Model;
 use App\Locker\Helpers\Helpers as Helpers;
 use App\Locker\Helpers\Exceptions as Exceptions;
 
