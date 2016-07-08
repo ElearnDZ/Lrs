@@ -64,9 +64,8 @@ class AuthenticateStatement
             if (!\Auth::onceUsingId($lrs->owner_id)) {
                 throw new Exceptions\Exception('Unauthorized request.', 401);
             }
-
             return $next($request);
-
         }
+        
     }
 }

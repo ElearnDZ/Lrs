@@ -1,15 +1,15 @@
-<?php namespace App\Http\Controllers\API;
+<?php 
+
+namespace App\Http\Controllers\API;
 
 use \Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Request;
 use \Response as IlluminateResponse;
 use \LockerRequest as LockerRequest;
 use \Config as Config;
-use \Request as Request;
 use \Route as Route;
 use \DB as DB;
 use App\Locker\Repository\Lrs\EloquentRepository as LrsRepository;
-use \Lrs as Lrs;
-use \Client as Client;
 use App\Locker\Helpers\Helpers as Helpers;
 
 
@@ -21,7 +21,6 @@ class Base extends Controller
      */
     public function __construct()
     {
-
         $this->lrs = Helpers::getLrsFromAuth();
         list($username, $password) = Helpers::getUserPassFromAuth();
         $this->client = Helpers::getClient($username, $password);

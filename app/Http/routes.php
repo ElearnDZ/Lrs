@@ -37,6 +37,14 @@ Route::get('/', function () {
     }
 });
 
+
+foreach( Route::getRoutes()->getIterator() as $route  ){
+    if( $route->getPrefix() === 'data/xAPI' || $route->getPrefix() === 'api/v1' ){
+        Route::options($route->getUri(), 'Controllers\API\Base@CORSOptions');
+    }
+}
+
+
 /*
 |------------------------------------------------------------------
 | Login
@@ -342,7 +350,7 @@ Route::get('data/xAPI/about', function () {
     ]);
 });
 
-Route::group(array('prefix' => 'data/xAPI', 'middleware' => 'auth.statement'), function () {
+Route::group(array('prefix' => 'data/xAPI', 'middleware' => ['cors','auth.statement']), function () {
 
     Config::set('xapi.using_version', '1.0.1');
 
@@ -383,7 +391,7 @@ Route::group(array('prefix' => 'data/xAPI', 'middleware' => 'auth.statement'), f
 
 });
 
-Route::group(['prefix' => 'api/v2', 'middleware' => 'auth.statement'], function () {
+Route::group(['prefix' => 'api/v2', 'middleware' => ['cors','auth.statement']], function () {
     Route::get('statements/insert', ['uses' => 'API\Statements@insert']);
     Route::get('statements/void', ['uses' => 'API\Statements@void']);
 });
@@ -394,7 +402,7 @@ Route::group(['prefix' => 'api/v2', 'middleware' => 'auth.statement'], function 
 |------------------------------------------------------------------
 */
 
-Route::group(array('prefix' => 'api/v1', 'middleware' => 'auth.statement'), function () {
+Route::group(array('prefix' => 'api/v1', 'middleware' => ['cors','auth.statement']), function () {
 
     Config::set('api.using_version', 'v1');
 
