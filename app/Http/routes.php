@@ -16,13 +16,6 @@ use App\Models\Site;
 //use Auth;
 use Illuminate\Support\Facades\View;
 
-App::singleton('oauth2', function () {
-    $storage = new OAuth2\Storage\Mongo(App::make('db')->getMongoDB());
-    $server = new OAuth2\Server($storage);
-    $server->addGrantType(new OAuth2\GrantType\ClientCredentials($storage));
-    return $server;
-});
-
 Route::get('/', function () {
     if (Auth::check()) {
         $site = Site::first();
@@ -50,12 +43,12 @@ Route::get('/', function () {
 |------------------------------------------------------------------
 */
 Route::get('login', array(
-    'before' => 'guest',
+    'middleware' => 'guest',
     'uses' => 'LoginController@create',
     'as' => 'login.create'
 ));
 Route::post('login', array(
-    'before' => 'guest',
+    'middleware' => 'guest',
     'uses' => 'LoginController@login',
     'as' => 'login.store'
 ));
@@ -70,12 +63,12 @@ Route::get('logout', array(
 |------------------------------------------------------------------
 */
 Route::get('register', array(
-    'before' => 'guest',
+    'middleware' => 'guest',
     'uses' => 'RegisterController@index',
     'as' => 'register.index'
 ));
 Route::post('register', array(
-    'before' => 'guest',
+    'middleware' => 'guest',
     'uses' => 'RegisterController@store',
     'as' => 'register.store'
 ));
@@ -214,31 +207,31 @@ Route::get('lrs/{id}/exporting', array(
 |------------------------------------------------------------------
 */
 Route::get('lrs/{id}/client/manage', array(
-    'before' => 'auth',
+    'middleware' => 'auth',
     'uses' => 'ClientController@manage',
     'as' => 'client.manage'
 ));
 
 Route::delete('lrs/{lrs_id}/client/{id}/destroy', array(
-    'before' => 'auth',
+    'middleware' => 'auth',
     'uses' => 'ClientController@destroy',
     'as' => 'client.destroy'
 ));
 
 Route::get('lrs/{lrs_id}/client/{id}/edit', array(
-    'before' => 'auth',
+    'middleware' => 'auth',
     'uses' => 'ClientController@edit',
     'as' => 'client.edit'
 ));
 
 Route::post('lrs/{id}/client/create', array(
-    'before' => ['auth', 'csrf'],
+    'middleware' => ['auth', 'csrf'],
     'uses' => 'ClientController@create',
     'as' => 'client.create'
 ));
 
 Route::put('lrs/{lrs_id}/client/{id}/update', array(
-    'before' => ['auth', 'csrf'],
+    'middleware' => ['auth', 'csrf'],
     'uses' => 'ClientController@update',
     'as' => 'client.update'
 ));
@@ -270,7 +263,7 @@ Route::get('lrs/{id}/reporting/typeahead/{segment}/{query}', array(
 Route::resource('users', 'UserController');
 Route::put('users/update/password/{id}', array(
     'as' => 'users.password',
-    'before' => 'csrf',
+    'middleware' => 'csrf',
     'uses' => 'PasswordController@updatePassword'
 ));
 Route::put('users/update/role/{id}/{role}', array(
@@ -308,11 +301,11 @@ Route::resource('statements', 'StatementController');
 //can only be run by super admins.
 Route::get('migrate', array(
     'as' => 'users.addpassword',
-    'before' => 'auth.super',
+    'middleware' => 'auth.super',
     'uses' => 'MigrateController@runMigration'
 ));
 Route::post('migrate/{id}', array(
-    'before' => 'auth.super',
+    'middleware' => 'auth.super',
     'uses' => 'MigrateController@convertStatements'
 ));
 
@@ -349,7 +342,7 @@ Route::get('data/xAPI/about', function () {
     ]);
 });
 
-Route::group(array('prefix' => 'data/xAPI', 'before' => 'auth.statement'), function () {
+Route::group(array('prefix' => 'data/xAPI', 'middleware' => 'auth.statement'), function () {
 
     Config::set('xapi.using_version', '1.0.1');
 
@@ -390,7 +383,7 @@ Route::group(array('prefix' => 'data/xAPI', 'before' => 'auth.statement'), funct
 
 });
 
-Route::group(['prefix' => 'api/v2', 'before' => 'auth.statement'], function () {
+Route::group(['prefix' => 'api/v2', 'middleware' => 'auth.statement'], function () {
     Route::get('statements/insert', ['uses' => 'API\Statements@insert']);
     Route::get('statements/void', ['uses' => 'API\Statements@void']);
 });
@@ -401,7 +394,7 @@ Route::group(['prefix' => 'api/v2', 'before' => 'auth.statement'], function () {
 |------------------------------------------------------------------
 */
 
-Route::group(array('prefix' => 'api/v1', 'before' => 'auth.statement'), function () {
+Route::group(array('prefix' => 'api/v1', 'middleware' => 'auth.statement'), function () {
 
     Config::set('api.using_version', 'v1');
 
@@ -463,65 +456,3 @@ foreach (Route::getRoutes()->getIterator() as $route) {
         Route::options($route->getUri(), 'Controllers\API\Base@CORSOptions');
     }
 }
-
-
-/*
-|------------------------------------------------------------------
-| For routes that don't exist
-|------------------------------------------------------------------
-*/
-/*App::missing(function($exception){
-
-    if ( Request::segment(1) == "data" || Request::segment(1) == "api" ) {
-        $error = array(
-            'error'     =>  true,
-            'message'   =>  $exception->getMessage(),
-            'code'      =>  $exception->getStatusCode()
-        );
-
-        return Response::json( $error, $exception->getStatusCode());
-    } else {
-        return Response::view( 'errors.missing', array( 'message'=>$exception->getMessage() ), 404);
-    }
-});
-
-App::error(function(Exception $exception) {
-    Log::error($exception);
-    $code = method_exists($exception, 'getStatusCode') ? $exception->getStatusCode() : 500;
-
-    if (Request::segment(1) == "data" || Request::segment(1) == "api") {
-        return Response::json([
-            'error' => true,
-            'success' => false,
-            'message' => method_exists($exception, 'getErrors') ? $exception->getErrors() : $exception->getMessage(),
-            'code' => $code,
-            'trace' => Config::get('app.debug') ? $exception->getTraceAsString() : trans('api.info.trace')
-        ], $code);
-    } else {
-        echo "Status: ".$code." Error: ".$exception->getMessage();
-    }
-});*/
-
-
-//Event::listen('user.login', 'App\Locker\Listeners\LoginHandler');
-
-//Event::listen('user.domain_check', 'App\Locker\Listeners\RegisterHandler@domain_check');
-
-//Event::listen('user.register', 'App\Locker\Listeners\RegisterHandler');
-
-//Event::listen('user.email_resend', 'App\Locker\Listeners\RegisterHandler@resentEmailVerification');
-
-// Adds a Client for the LRS when the LRS is created.
-/*Event::listen('Lrs.store', function ($opts) {
-    $repo = new App\Locker\Repository\Client\EloquentRepository();
-    $repo->store([], ['lrs_id' => $opts['model']->_id]);
-});*/
-
-// Removes Clients for the LRS when the LRS is destroyed.
-/*Event::listen('Lrs.destroy', function ($opts) {
-    $repo = new App\Locker\Repository\Client\EloquentRepository();
-    $clients = $repo->index(['lrs_id' => $opts['id']]);
-    foreach ($clients as $client) {
-        $repo->destroy($client->_id, ['lrs_id' => $opts['id']]);
-    }
-});*/
