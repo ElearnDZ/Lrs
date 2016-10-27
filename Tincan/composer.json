@@ -1,0 +1,20 @@
+{
+    "name": "lrs/tincan",
+    "description": "Demo package for Tincan article.",
+    "keywords": ["laravel", "demo"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "priya",
+            "email": "priya.bp@compassitesinc.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "lrs\\tincan\\": "src/"
+        }
+    },
+    "require": {
+        "illuminate/support": "~5"
+    }
+}
