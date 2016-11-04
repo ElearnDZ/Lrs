@@ -1,5 +1,13 @@
 {
-    "require": {
-        "lrs/tincan": "dev-master"
-    }
+    "name": "lrs/tincan",
+    "description": "Tracking user activity",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Priyabp",
+            "email": "priya.bp@compassitesinc.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
 }
