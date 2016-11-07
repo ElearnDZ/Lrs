@@ -6,20 +6,7 @@
 		"name": "Priyabp",
 		"email": "priya.bp@compassitesinc.com"
 	}],
-	"require": {
-		"php": ">=5.5.9",
-		"laravel/framework": "5.1.*",
-		"jenssegers/mongodb": "^3.0",
-		"davejamesmiller/laravel-breadcrumbs": "^3.0",
-		"barryvdh/laravel-cors": "^0.8.0",
-		"learninglocker/statementfactory": "0.0.*",
-		"andywer/js-localization": "dev-laravel-5",
-		"philo/laravel-translate": "2.0.x",
-		"seld/jsonlint": "^1.4",
-		"lucadegasperi/oauth2-server-laravel": "5.1.*",
-		"laravelcollective/html": "5.1.*",
-		"mariuzzo/laravel-js-localization": "1.2.*"
-	},
+	"require": {},
 	"require-dev": {
 		"fzaninotto/faker": "~1.4",
 		"mockery/mockery": "0.9.*",
