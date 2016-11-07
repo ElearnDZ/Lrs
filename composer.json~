@@ -1,0 +1,12 @@
+{
+    "name": "priyabp/lrs",
+    "description": "Tracking the user activity",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Priyabp",
+            "email": "priya.bp@compassitesinc.com"
+        }
+    ],
+    "require": {}
+}
