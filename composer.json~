@@ -9,7 +9,7 @@
 	"require": {},
 	"autoload": {
 		"classmap": [
-			"database"
+			
 
 		],
 		"psr-4": {
