@@ -1,8 +1,10 @@
 <?php
 
-namespace Lrs\Tincan;
+namespace Priyabp\Lrs;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Routing\Router;
+use \App;
 
 class TincanServiceProvider extends ServiceProvider
 {
@@ -13,8 +15,23 @@ class TincanServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        require __DIR__.'/Http/routes.php';
-        // $this->loadViewsFrom(__DIR__ .'/../views','todo');
+        $this->setupRoutes($this->app->router);
+        // require __DIR__.'/app/Http/routes.php';
+
+        // $this->loadViewsFrom(__DIR__ .'/../resources/views','todo');
+    }
+    /**
+     * Define the routes for the application.
+     *
+     * @param  \Illuminate\Routing\Router  $router
+     * @return void
+     */
+    public function setupRoutes(Router $router)
+    {
+        $router->group(['namespace' => 'Priyabp\Lrs\Tracker\Http\Controllers'], function($router)
+        {
+            require __DIR__.'/Http/routes.php';
+        });
     }
 
     /**
@@ -24,8 +41,8 @@ class TincanServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('tincan',function($app){
-            return new Tincan;
+        $this->app->bind('lrs',function($app){
+            return new Lrs;
         });
     }
 }
