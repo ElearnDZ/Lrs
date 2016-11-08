@@ -16,7 +16,7 @@
 		"psr-4": {
 			"App\\": "app/",
 			"Locker\\": "app/locker/",
-			"Lrs\\": "src/Tracker/"
+			"Lrs\\": "src/Tracker/TincanServiceProvider"
 
 
 		}
