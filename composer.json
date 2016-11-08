@@ -6,12 +6,21 @@
 		"name": "Priyabp",
 		"email": "priya.bp@compassitesinc.com"
 	}],
-	"require": {},
-	"autoload": {
+	"require": {
 		
+	},
+	"require-dev": {
+		
+	},
+	"autoload": {
+		"classmap": [
+			"database"
+
+		],
 		"psr-4": {
 			"App\\": "app/",
-			"Locker\\": "app/locker/"
+			"Locker\\": "app/locker/",
+			"Lrs\\": "src/Tracker/"
 
 
 		}
