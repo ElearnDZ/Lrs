@@ -22,21 +22,7 @@ class TincanServiceProvider extends ServiceProvider
         // $this->loadViewsFrom(__DIR__ .'/../views','todo');
     }
 
-    /**
-     * Define the routes for the application.
-     *
-     * @param  \Illuminate\Routing\Router  $router
-     * @return void
-     */
-    public function setupRoutes(Router $router)
-    {
-        $router->group(['namespace' => 'Priyabp\Lrs\Tracker\App\Http\Controllers'], function($router)
-        {
-            require __DIR__.'/Http/routes.php';
-        });
-    }
-
-    /**
+     /**
      * Register any application services.
      *
      * @return void
