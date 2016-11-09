@@ -13,7 +13,7 @@ class TincanServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        require __DIR__.'/Http/routes.php';
+        require __DIR__.'/app/Http/routes.php';
         // $this->loadViewsFrom(__DIR__ .'/../views','todo');
     }
 
