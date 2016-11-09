@@ -3,6 +3,8 @@
 namespace Lrs\Tincan;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Routing\Router;
+use \App;
 
 class TincanServiceProvider extends ServiceProvider
 {
@@ -11,10 +13,27 @@ class TincanServiceProvider extends ServiceProvider
      *
      * @return void
      */
+    protected $defer = false;
+
     public function boot()
     {
-        require __DIR__.'/app/Http/routes.php';
+        // require __DIR__.'/Http/routes.php';
+        $this->setupRoutes($this->app->router);
         // $this->loadViewsFrom(__DIR__ .'/../views','todo');
+    }
+
+    /**
+     * Define the routes for the application.
+     *
+     * @param  \Illuminate\Routing\Router  $router
+     * @return void
+     */
+    public function setupRoutes(Router $router)
+    {
+        $router->group(['namespace' => 'Priyabp\Lrs\Tracker\Http\Controllers'], function($router)
+        {
+            require __DIR__.'/Http/routes.php';
+        });
     }
 
     /**
