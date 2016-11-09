@@ -1,6 +1,6 @@
 <?php
 
-namespace Priyabp\Lrs;
+namespace Lrs\Tincan;
 
 use Illuminate\Support\ServiceProvider;
 
