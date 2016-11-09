@@ -3,8 +3,6 @@
 namespace Lrs\Tincan;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Routing\Router;
-use \App;
 
 class TincanServiceProvider extends ServiceProvider
 {
@@ -13,8 +11,7 @@ class TincanServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    protected $defer = false;
-
+   
     public function boot()
     {
          require __DIR__.'/Http/routes.php';
