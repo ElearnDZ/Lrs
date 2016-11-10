@@ -14,7 +14,7 @@ class TincanServiceProvider extends ServiceProvider
    
     public function boot()
     {
-         require __DIR__.'/App/Http/routes.php';
+         require __DIR__.'/app/Http/routes.php';
         //$this->setupRoutes($this->app->router);
         // $this->loadViewsFrom(__DIR__ .'/../views','todo');
     }
