@@ -16,8 +16,8 @@ class TincanServiceProvider extends ServiceProvider
    
     public function boot()
     {
-         // require __DIR__.'/app/Http/routes.php';
-        $this->setupRoutes($this->app->router);
+         require __DIR__.'/app/Http/routes.php';
+        // $this->setupRoutes($this->app->router);
         // $this->loadViewsFrom(__DIR__ .'/../views','todo');
     }
 
@@ -27,13 +27,13 @@ class TincanServiceProvider extends ServiceProvider
      * @param  \Illuminate\Routing\Router  $router
      * @return void
      */
-    public function setupRoutes(Router $router)
-    {
-        $router->group(['namespace' => 'Lrs\Tincan\app\Http\Controllers'], function($router)
-        {
-            require __DIR__.'/app/Http/routes.php';
-        });
-    }
+    // public function setupRoutes(Router $router)
+    // {
+    //     $router->group(['namespace' => 'Lrs\Tincan\app\Http\Controllers'], function($router)
+    //     {
+    //         require __DIR__.'/app/Http/routes.php';
+    //     });
+    // }
 
 
      /**
