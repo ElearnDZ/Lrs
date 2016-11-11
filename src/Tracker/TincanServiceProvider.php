@@ -3,6 +3,8 @@
 namespace Lrs\Tracker;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Routing\Router;
+use \App;
 
 class TincanServiceProvider extends ServiceProvider
 {
@@ -14,8 +16,23 @@ class TincanServiceProvider extends ServiceProvider
    
     public function boot()
     {
-         require __DIR__.'/app/Http/routes.php';
+        $this->setupRoutes($this->app->router);
+         // require __DIR__.'/app/Http/routes.php';
     }
+    /**
+     * Define the routes for the application.
+     *
+     * @param  \Illuminate\Routing\Router  $router
+     * @return void
+     */
+    public function setupRoutes(Router $router)
+    {
+        $router->group(['namespace' => 'Lrs\Tracker\Http\Controllers'], function($router)
+        {
+            require __DIR__.'/Http/routes.php';
+        });
+    }
+
 
      /**
      * Register any application services.
