@@ -1,6 +1,6 @@
 <?php
 
-namespace Lrs\Lrstracker;
+namespace Lrs\Tracker;
 
 use Illuminate\Support\ServiceProvider;
 
