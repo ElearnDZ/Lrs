@@ -1,6 +1,6 @@
 <?php
 
-namespace Lrs\Tincan;
+namespace Lrs\Tracker;
 
 use Illuminate\Support\ServiceProvider;
 
