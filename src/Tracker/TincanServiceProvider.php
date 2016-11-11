@@ -29,7 +29,7 @@ class TincanServiceProvider extends ServiceProvider
     {
         $router->group(['namespace' => 'Lrs\Tracker\Http\Controllers'], function($router)
         {
-            require __DIR__.'/Http/routes.php';
+            require __DIR__.'/app/Http/routes.php';
         });
     }
 
