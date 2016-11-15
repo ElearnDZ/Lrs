@@ -17,7 +17,8 @@
 			
 			"Locker\\": "src/Tracker/app/Locker/",
 			"Lrs\\": "src/Tracker/",
-			"Controllers\\":"src/Tracker/app/Http/Controllers/"
+			"Controllers\\":"src/Tracker/app/Http/Controllers/",
+			"Trackerapp\\": "src/Tracker/app/"
 
 
 		}
