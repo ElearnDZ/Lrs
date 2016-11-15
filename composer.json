@@ -14,7 +14,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"App\\": "src/Tracker/app/",
+			
 			"Locker\\": "src/Tracker/app/Locker/",
 			"Lrs\\": "src/Tracker/",
 			"Controllers\\":"src/Tracker/app/Http/Controllers/"
