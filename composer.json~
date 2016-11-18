@@ -6,12 +6,19 @@
 		"name": "Priyabp",
 		"email": "priya.bp@compassitesinc.com"
 	}],
-	"require": {},
-	"autoload": {
+	"require": {
 		
+	},
+	"require-dev": {
+		
+	},
+	"autoload": {
 		"psr-4": {
-			"App\\": "app/",
-			"Locker\\": "app/locker/"
+			"App\\": "src/Tracker/app/",
+			"TincanHttp\\":"src",
+			"Locker\\": "src/Tracker/Locker/",
+			"Lrs\\": "src/Tracker/",
+			"Controllers\\":"src/Tracker/app/Http/Controllers/"
 
 
 		}
