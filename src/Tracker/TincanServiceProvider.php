@@ -27,9 +27,9 @@ class TincanServiceProvider extends ServiceProvider
      */
     public function setupRoutes(Router $router)
     {
-        $router->group(['namespace' => 'App\Http\Controllers'], function($router)
+        $router->group(['namespace' => 'Http\Controllers'], function($router)
         {
-            require __DIR__.'/app/Http/routes.php';
+            require __DIR__.'Http/routes.php';
         });
     }
 
