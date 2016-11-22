@@ -1,9 +1,9 @@
-<?php namespace App\Http\Controllers\xAPI;
+<?php namespace Lrs\Tracker\Http\Controllers\xAPI;
 
-use App\Locker\Repository\Statement\Repository as StatementRepo;
-use App\Locker\Helpers\Attachments as Attachments;
-use App\Locker\Helpers\Exceptions as Exceptions;
-use App\Locker\Helpers\Helpers as Helpers;
+use Lrs\Tracker\Locker\Repository\Statement\Repository as StatementRepo;
+use Lrs\Tracker\Locker\Helpers\Attachments as Attachments;
+use Lrs\Tracker\Locker\Helpers\Exceptions as Exceptions;
+use Lrs\Tracker\Locker\Helpers\Helpers as Helpers;
 use \Locker\XApi\IMT as XApiImt;
 use \LockerRequest as LockerRequest;
 use \Response as IlluminateResponse;
