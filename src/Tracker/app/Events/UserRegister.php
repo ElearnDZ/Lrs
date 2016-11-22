@@ -1,9 +1,8 @@
 <?php
 
-namespace App\Events;
-
-use App\Events\Event;
-use App\Models\User;
+namespace Lrs\Tracker
+use Lrs\Tracker\Events\Event;
+use Lrs\Tracker\Models\User;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 

@@ -1,4 +1,4 @@
-<?php namespace App\Locker\Helpers;
+<?php namespace Lrs\Tracker\Locker\Helpers;
 
 class Access
 {

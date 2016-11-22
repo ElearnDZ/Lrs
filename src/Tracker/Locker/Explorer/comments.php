@@ -1,4 +1,4 @@
-<?php namespace App\Locker\Explorer;
+<?php namespace Lrs\Tracker\Locker\Explorer;
 
 class Comments
 {

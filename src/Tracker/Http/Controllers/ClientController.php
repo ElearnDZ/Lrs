@@ -1,10 +1,10 @@
 <?php
-namespace App\Http\Controllers;
+namespace Lrs\Tracker\Http\Controllers;
 
-use App\Locker\Repository\User\UserRepository as UserRepo;
-use App\Locker\Repository\Lrs\Repository as LrsRepo;
-use App\Locker\Repository\Client\Repository as ClientRepo;
-use App\Models\Client;
+use Lrs\Tracker\Locker\Repository\User\UserRepository as UserRepo;
+use Lrs\Tracker\Locker\Repository\Lrs\Repository as LrsRepo;
+use Lrs\Tracker\Locker\Repository\Client\Repository as ClientRepo;
+use Lrs\Tracker\Models\Client;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
 

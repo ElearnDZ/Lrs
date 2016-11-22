@@ -1,5 +1,5 @@
 <?php
-namespace App\Http\Controllers\API;
+namespace Lrs\Tracker\Http\Controllers\API;
 
 use \LockerRequest as LockerRequest;
 use \Response as IlluminateResponse;

@@ -1,7 +1,7 @@
-<?php namespace App\Locker\Listeners;
+<?php namespace Lrs\Tracker\Locker\Listeners;
 
-use App\Models\Site;
-use App\Models\User;
+use Lrs\Tracker\Models\Site;
+use Lrs\Tracker\Models\User;
 
 class RegisterHandler
 {

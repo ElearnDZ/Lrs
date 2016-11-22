@@ -11,8 +11,8 @@
 |
 */
 
-use App\Models\Lrs;
-use App\Models\Site;
+use Lrs\Tracker\Models\Lrs;
+use Lrs\Tracker\Models\Site;
 //use Auth;
 use Illuminate\Support\Facades\View;
 

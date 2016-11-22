@@ -1,12 +1,12 @@
 <?php
-namespace App\Http\Controllers;
+namespace Lrs\Tracker\Http\Controllers;
 
-use App\Locker\Data\Dashboards\AdminDashboard;
-use App\Locker\Helpers\User;
-use App\Locker\Repository\Site\SiteRepository as SiteRepo;
-use App\Locker\Repository\Lrs\Repository as LrsRepo;
-use App\Locker\Repository\Statement\Repository as StatementRepo;
-use App\Locker\Repository\User\UserRepository as UserRepo;
+use Lrs\Tracker\Locker\Data\Dashboards\AdminDashboard;
+use Lrs\Tracker\Locker\Helpers\User;
+use Lrs\Tracker\Locker\Repository\Site\SiteRepository as SiteRepo;
+use Lrs\Tracker\Locker\Repository\Lrs\Repository as LrsRepo;
+use Lrs\Tracker\Locker\Repository\Statement\Repository as StatementRepo;
+use Lrs\Tracker\Locker\Repository\User\UserRepository as UserRepo;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;

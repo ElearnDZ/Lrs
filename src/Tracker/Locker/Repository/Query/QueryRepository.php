@@ -1,4 +1,4 @@
-<?php namespace App\Locker\Repository\Query;
+<?php namespace Lrs\Tracker\Locker\Repository\Query;
 
 interface QueryRepository
 {

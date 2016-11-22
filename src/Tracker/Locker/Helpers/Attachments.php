@@ -1,4 +1,4 @@
-<?php namespace App\Locker\Helpers;
+<?php namespace Lrs\Tracker\Locker\Helpers;
 
 use \Locker\Helpers\Exceptions as Exceptions;
 use \Locker\Repository\Document\FileTypes as FileTypes;

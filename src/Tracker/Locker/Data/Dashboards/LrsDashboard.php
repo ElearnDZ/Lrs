@@ -1,4 +1,4 @@
-<?php namespace App\Locker\Data\Dashboards;
+<?php namespace Lrs\Tracker\Locker\Data\Dashboards;
 
 class LrsDashboard extends BaseDashboard
 {

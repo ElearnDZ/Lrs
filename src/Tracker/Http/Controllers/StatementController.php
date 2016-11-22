@@ -1,8 +1,8 @@
 <?php
-namespace App\Http\Controllers;
+namespace Lrs\Tracker\Http\Controllers;
 
-use App\Locker\Repository\Statement\Repository as StatementRepo;
-use App\Locker\Repository\Lrs\Repository as LrsRepo;
+use Lrs\Tracker\Locker\Repository\Statement\Repository as StatementRepo;
+use Lrs\Tracker\Locker\Repository\Lrs\Repository as LrsRepo;
 
 class StatementController extends BaseController
 {

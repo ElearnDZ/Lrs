@@ -1,4 +1,4 @@
-<?php namespace App\Locker\Repository\File;
+<?php namespace Lrs\Tracker\Locker\Repository\File;
 
 use Barracuda\Copy\API as CopyAPI;
 use League\Flysystem\Copy\CopyAdapter as CopyAdapter;

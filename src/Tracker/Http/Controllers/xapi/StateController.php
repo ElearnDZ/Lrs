@@ -1,7 +1,7 @@
-<?php namespace App\Http\Controllers\xAPI;
+<?php namespace Lrs\Tracker\Http\Controllers\xAPI;
 
-use App\Locker\Repository\Document\DocumentRepository as Document;
-use App\Locker\Repository\Document\DocumentType as DocumentType;
+use Lrs\Tracker\Locker\Repository\Document\DocumentRepository as Document;
+use Lrs\Tracker\Locker\Repository\Document\DocumentType as DocumentType;
 
 class StateController extends DocumentController
 {

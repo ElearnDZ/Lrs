@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\xAPI;
+namespace Lrs\Tracker\Http\Controllers\xAPI;
 
-use App\Locker\Repository\Document\DocumentRepository as Document;
+use Lrs\Tracker\Locker\Repository\Document\DocumentRepository as Document;
 use Carbon\Carbon;
-use App\Locker\Helpers\Exceptions as Exceptions;
-use App\Locker\Repository\File\Factory as FileFactory;
+use Lrs\Tracker\Locker\Helpers\Exceptions as Exceptions;
+use Lrs\Tracker\Locker\Repository\File\Factory as FileFactory;
 
 abstract class DocumentController extends BaseController
 {

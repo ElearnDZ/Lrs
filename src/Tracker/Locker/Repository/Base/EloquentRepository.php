@@ -1,9 +1,9 @@
-<?php namespace App\Locker\Repository\Base;
+<?php namespace Lrs\Tracker\Locker\Repository\Base;
 
-use App\Events\LrsDestroy;
-use App\Events\LrsStore;
-use App\Locker\Helpers\Exceptions as Exceptions;
-use App\Models\Lrs;
+use Lrs\Tracker\Tracker\Events\LrsDestroy;
+use Lrs\Tracker\Events\LrsStore;
+use Lrs\Tracker\Locker\Helpers\Exceptions as Exceptions;
+use Lrs\Tracker\Models\Lrs;
 use Jenssegers\Mongodb\Eloquent\Model as Model;
 
 abstract class EloquentRepository implements Repository

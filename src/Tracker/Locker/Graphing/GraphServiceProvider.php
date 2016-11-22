@@ -1,4 +1,4 @@
-<?php namespace App\Locker\Graphing;
+<?php namespace Lrs\Tracker\Locker\Graphing;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -9,8 +9,8 @@ class GraphServiceProvider extends ServiceProvider
     {
 
         $this->app->bind(
-            'App\Locker\Graphing\GraphingInterface',
-            'App\Locker\Graphing\Graphing'
+            'Lrs\Tracker\Locker\Graphing\GraphingInterface',
+            'Lrs\Tracker\Locker\Graphing\Graphing'
         );
 
     }

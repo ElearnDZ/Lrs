@@ -1,6 +1,6 @@
-<?php namespace App\Locker\Repository\Statement;
+<?php namespace Lrs\Tracker\Locker\Repository\Statement;
 
-use App\Locker\Helpers\Exceptions as Exceptions;
+use Lrs\Tracker\Locker\Helpers\Exceptions as Exceptions;
 
 interface VoiderInterface
 {

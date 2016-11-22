@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Listeners;
+namespace Lrs\Tracker\Listeners;
 
-use App\Events\LrsDestroy;
-use App\Locker\Repository\Client\EloquentRepository;
+use Lrs\Tracker\Events\LrsDestroy;
+use Lrs\Tracker\Locker\Repository\Client\EloquentRepository;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 

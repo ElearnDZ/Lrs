@@ -1,4 +1,4 @@
-<?php namespace App\Locker\Graphing;
+<?php namespace Lrs\Tracker\Locker\Graphing;
 
 class Graphing implements GraphingInterface
 {

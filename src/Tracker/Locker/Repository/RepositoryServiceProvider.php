@@ -1,4 +1,4 @@
-<?php namespace App\Locker\Repository;
+<?php namespace Lrs\Tracker\Locker\Repository;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -8,45 +8,45 @@ class RepositoryServiceProvider extends ServiceProvider
     public function register()
     {
 
-        $this->app->bind(
-            'App\Locker\Repository\User\UserRepository',
-            'App\Locker\Repository\User\EloquentUserRepository'
+        $this->Lrs\Tracker->bind(
+            'Lrs\Tracker\Locker\Repository\User\UserRepository',
+            'Lrs\Tracker\Locker\Repository\User\EloquentUserRepository'
         );
-        $this->app->bind(
-            'App\Locker\Repository\Statement\Repository',
-            'App\Locker\Repository\Statement\EloquentRepository'
+        $this->Lrs\Tracker->bind(
+            'Lrs\Tracker\Locker\Repository\Statement\Repository',
+            'Lrs\Tracker\Locker\Repository\Statement\EloquentRepository'
         );
-        $this->app->bind(
-            'App\Locker\Repository\Lrs\Repository',
-            'App\Locker\Repository\Lrs\EloquentRepository'
+        $this->Lrs\Tracker->bind(
+            'Lrs\Tracker\Locker\Repository\Lrs\Repository',
+            'Lrs\Tracker\Locker\Repository\Lrs\EloquentRepository'
         );
-        $this->app->bind(
-            'App\Locker\Repository\Client\Repository',
-            'App\Locker\Repository\Client\EloquentRepository'
+        $this->Lrs\Tracker->bind(
+            'Lrs\Tracker\Locker\Repository\Client\Repository',
+            'Lrs\Tracker\Locker\Repository\Client\EloquentRepository'
         );
-        $this->app->bind(
-            'App\Locker\Repository\Site\SiteRepository',
-            'App\Locker\Repository\Site\EloquentSiteRepository'
+        $this->Lrs\Tracker->bind(
+            'Lrs\Tracker\Locker\Repository\Site\SiteRepository',
+            'Lrs\Tracker\Locker\Repository\Site\EloquentSiteRepository'
         );
-        $this->app->bind(
-            'App\Locker\Repository\Query\QueryRepository',
-            'App\Locker\Repository\Query\EloquentQueryRepository'
+        $this->Lrs\Tracker->bind(
+            'Lrs\Tracker\Locker\Repository\Query\QueryRepository',
+            'Lrs\Tracker\Locker\Repository\Query\EloquentQueryRepository'
         );
-        $this->app->bind(
-            'App\Locker\Repository\Document\DocumentRepository',
-            'App\Locker\Repository\Document\EloquentDocumentRepository'
+        $this->Lrs\Tracker->bind(
+            'Lrs\Tracker\Locker\Repository\Document\DocumentRepository',
+            'Lrs\Tracker\Locker\Repository\Document\EloquentDocumentRepository'
         );
-        $this->app->bind(
-            'App\Locker\Repository\OAuthApp\OAuthAppRepository',
-            'App\Locker\Repository\OAuthApp\EloquentOAuthAppRepository'
+        $this->Lrs\Tracker->bind(
+            'Lrs\Tracker\Locker\Repository\OAuthLrs\Tracker\OAuthLrs\TrackerRepository',
+            'Lrs\Tracker\Locker\Repository\OAuthLrs\Tracker\EloquentOAuthLrs\TrackerRepository'
         );
-        $this->app->bind(
-            'App\Locker\Repository\Report\Repository',
-            'App\Locker\Repository\Report\EloquentRepository'
+        $this->Lrs\Tracker->bind(
+            'Lrs\Tracker\Locker\Repository\Report\Repository',
+            'Lrs\Tracker\Locker\Repository\Report\EloquentRepository'
         );
-        $this->app->bind(
-            'App\Locker\Repository\Export\Repository',
-            'App\Locker\Repository\Export\EloquentRepository'
+        $this->Lrs\Tracker->bind(
+            'Lrs\Tracker\Locker\Repository\Export\Repository',
+            'Lrs\Tracker\Locker\Repository\Export\EloquentRepository'
         );
     }
 

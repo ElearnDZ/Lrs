@@ -1,8 +1,8 @@
-<?php namespace App\Locker\Repository\Site;
+<?php namespace Lrs\Tracker\Locker\Repository\Site;
 
 
-use App\Models\Site;
-use App\Models\User;
+use Lrs\Tracker\Models\Site;
+use Lrs\Tracker\Models\User;
 
 class EloquentSiteRepository implements SiteRepository
 {

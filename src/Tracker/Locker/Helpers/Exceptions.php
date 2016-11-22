@@ -1,4 +1,4 @@
-<?php namespace App\Locker\Helpers\Exceptions;
+<?php namespace Lrs\Tracker\Locker\Helpers\Exceptions;
 
 class Exception extends \Exception
 {

@@ -1,4 +1,4 @@
-<?php namespace App\Locker\Repository\File;
+<?php namespace Lrs\Tracker\Locker\Repository\File;
 
 use WindowsAzure\Common\ServicesBuilder;
 use League\Flysystem\Azure\AzureAdapter;

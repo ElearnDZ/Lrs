@@ -1,4 +1,4 @@
-<?php namespace App\Locker\Repository\File;
+<?php namespace Lrs\Tracker\Locker\Repository\File;
 
 use Aws\S3\S3Client as S3Client;
 use League\Flysystem\AwsS3v3\AwsS3Adapter as AwsS3Adapter;

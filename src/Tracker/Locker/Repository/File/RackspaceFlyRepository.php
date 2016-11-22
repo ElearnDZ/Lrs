@@ -1,4 +1,4 @@
-<?php namespace App\Locker\Repository\File;
+<?php namespace Lrs\Tracker\Locker\Repository\File;
 
 use OpenCloud\Rackspace as Rackspace;
 use League\Flysystem\Rackspace\RackspaceAdapter as RackspaceAdapter;

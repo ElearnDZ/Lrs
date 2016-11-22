@@ -1,6 +1,6 @@
-<?php namespace App\Http\Controllers\API;
+<?php namespace Lrs\Tracker\Http\Controllers\API;
 
-use App\Locker\Repository\Export\Repository as Export;
+use Lrs\Tracker\Locker\Repository\Export\Repository as Export;
 use \Response as IlluminateResponse;
 
 class Exports extends Resources

@@ -1,4 +1,4 @@
-<?php namespace App\Locker\Repository\Document;
+<?php namespace Lrs\Tracker\Locker\Repository\Document;
 
 class FileTypes
 {

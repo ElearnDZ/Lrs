@@ -1,4 +1,4 @@
-<?php namespace App\Locker\Repository\File;
+<?php namespace Lrs\Tracker\Locker\Repository\File;
 
 use Dropbox\Client as DropboxClient;
 use League\Flysystem\Dropbox\DropboxAdapter as DropboxAdapter;

@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Listeners;
+namespace Lrs\Tracker\Listeners;
 
-use App\Events\UserRegister;
-use App\Models\Site;
-use App\Models\User;
+use Lrs\Tracker\Events\UserRegister;
+use Lrs\Tracker\Models\Site;
+use Lrs\Tracker\Models\User;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use MongoId;

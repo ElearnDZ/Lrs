@@ -1,5 +1,5 @@
 <?php
-namespace App\Http\Controllers;
+namespace Lrs\Tracker\Http\Controllers;
 class BaseController extends Controller
 {
 

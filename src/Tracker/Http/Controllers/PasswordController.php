@@ -1,8 +1,8 @@
 <?php
-namespace App\Http\Controllers;
+namespace Lrs\Tracker\Http\Controllers;
 
-use App\Locker\Repository\User\UserRepository as User;
-use App\Models\Lrs;
+use Lrs\Tracker\Locker\Repository\User\UserRepository as User;
+use Lrs\Tracker\Models\Lrs;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Input;

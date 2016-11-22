@@ -1,4 +1,4 @@
-<?php namespace App\Locker\Repository\User;
+<?php namespace Lrs\Tracker\Locker\Repository\User;
 
 interface UserRepository
 {

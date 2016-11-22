@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace Lrs\Tracker\Http\Middleware;
 
-use App\Models\Lrs;
+use Lrs\Tracker\Models\Lrs;
 use Closure;
 use Illuminate\Support\Facades\Redirect;
 

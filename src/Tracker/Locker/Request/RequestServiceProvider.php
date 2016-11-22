@@ -1,4 +1,4 @@
-<?php namespace App\Locker;
+<?php namespace Lrs\Tracker\Locker;
 
 use Illuminate\Support\ServiceProvider;
 

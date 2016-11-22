@@ -1,6 +1,6 @@
-<?php namespace App\Locker\Repository\File;
+<?php namespace Lrs\Tracker\Locker\Repository\File;
 
-use App\Locker\Helpers\Helpers as Helpers;
+use Lrs\Tracker\Locker\Helpers\Helpers as Helpers;
 
 class Factory
 {
@@ -30,7 +30,7 @@ class Factory
             $selected_repo = 'Locker\Repository\File\\' . $repos[$repo];
             return new $selected_repo($conf);
         } else {
-            throw new \Exception('Valid `FS_REPO` not specified in ".env.' . \App::environment() . '.php". Valid values include: "' . implode('", "', array_keys($repos)) . '". You provided "' . $repo . '".');
+            throw new \Exception('Valid `FS_REPO` not specified in ".env.' . \Lrs\Tracker::environment() . '.php". Valid values include: "' . implode('", "', array_keys($repos)) . '". You provided "' . $repo . '".');
         }
     }
 }

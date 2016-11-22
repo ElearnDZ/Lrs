@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\API;
+namespace Lrs\Tracker\Http\Controllers\API;
 
 use Authorizer;
-use App\Http\Controllers\Controller;
+use Lrs\Tracker\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 

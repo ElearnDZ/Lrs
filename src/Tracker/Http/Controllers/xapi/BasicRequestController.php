@@ -1,6 +1,6 @@
-<?php namespace App\Http\Controllers\xAPI;
+<?php namespace Lrs\Tracker\Http\Controllers\xAPI;
 
-use App\Locker\Repository\Client\Repository as Client;
+use Lrs\Tracker\Locker\Repository\Client\Repository as Client;
 
 class BasicRequestController extends BaseController
 {

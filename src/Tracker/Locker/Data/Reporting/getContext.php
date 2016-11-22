@@ -1,4 +1,4 @@
-<?php namespace App\Locker\Data\Reporting;
+<?php namespace Lrs\Tracker\Locker\Data\Reporting;
 
 class getContext
 {

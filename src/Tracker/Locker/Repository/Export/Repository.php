@@ -1,5 +1,5 @@
-<?php namespace App\Locker\Repository\Export;
+<?php namespace Lrs\Tracker\Locker\Repository\Export;
 
-interface Repository extends \App\Locker\Repository\Base\Repository
+interface Repository extends \Lrs\Tracker\Locker\Repository\Base\Repository
 {
 }

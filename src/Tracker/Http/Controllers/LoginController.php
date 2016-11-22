@@ -1,5 +1,5 @@
 <?php
-namespace App\Http\Controllers;
+namespace Lrs\Tracker\Http\Controllers;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;

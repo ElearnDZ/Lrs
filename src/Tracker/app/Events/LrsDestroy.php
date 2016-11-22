@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Events;
+namespace Lrs\Tracker\Events;
 
 use App\Events\Event;
 use Illuminate\Queue\SerializesModels;

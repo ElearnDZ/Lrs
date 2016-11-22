@@ -1,11 +1,11 @@
-<?php namespace App\Locker\Repository\Query;
+<?php namespace Lrs\Tracker\Locker\Repository\Query;
 
-use App\Models\Statement;
+use Lrs\Tracker\Models\Statement;
 use \Cache as IlluminateCache;
 use \Carbon\Carbon as Carbon;
-use App\Locker\Helpers\Helpers as Helpers;
-use App\Locker\Helpers\Exceptions as Exceptions;
-use App\Locker\Repository\Statement\EloquentRepository as StatementsRepo;
+use Lrs\Tracker\Locker\Helpers\Helpers as Helpers;
+use Lrs\Tracker\Locker\Helpers\Exceptions as Exceptions;
+use Lrs\Tracker\Locker\Repository\Statement\EloquentRepository as StatementsRepo;
 
 class EloquentQueryRepository implements QueryRepository
 {

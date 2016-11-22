@@ -1,7 +1,7 @@
-<?php namespace App\Locker\Data\Dashboards;
+<?php namespace Lrs\Tracker\Locker\Data\Dashboards;
 
-use App\Models\Lrs;
-use App\Models\User;
+use Lrs\Tracker\Models\Lrs;
+use Lrs\Tracker\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 

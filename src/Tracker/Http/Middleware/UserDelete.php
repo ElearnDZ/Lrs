@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace Lrs\Tracker\Http\Middleware;
 
-use App\Locker\Helpers\Access;
+use Lrs\Tracker\Locker\Helpers\Access;
 use Closure;
 
 class UserDelete

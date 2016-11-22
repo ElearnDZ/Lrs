@@ -1,9 +1,9 @@
-<?php namespace App\Http\Controllers\xAPI;
+<?php namespace Lrs\Tracker\Http\Controllers\xAPI;
 
 use \Illuminate\Routing\Controller;
-use App\Http\Controllers\API\Base as APIBaseController;
-use \App\Locker\Statements\xAPIValidation as XApiValidator;
-use App\Locker\Helpers\Exceptions as Exceptions;
+use Lrs\Tracker\Http\Controllers\API\Base as APIBaseController;
+use \Lrs\Tracker\Locker\Statements\xAPIValidation as XApiValidator;
+use Lrs\Tracker\Locker\Helpers\Exceptions as Exceptions;
 
 class BaseController extends APIBaseController
 {

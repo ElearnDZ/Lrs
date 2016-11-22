@@ -1,8 +1,8 @@
-<?php namespace App\Locker\Repository\Document;
+<?php namespace Lrs\Tracker\Locker\Repository\Document;
 
-use App\Models\DocumentAPI;
+use Lrs\Tracker\Models\DocumentAPI;
 use \Carbon\Carbon;
-use App\Locker\Helpers\Exceptions as Exceptions;
+use Lrs\Tracker\Locker\Helpers\Exceptions as Exceptions;
 
 class EloquentDocumentRepository implements DocumentRepository
 {

@@ -1,8 +1,8 @@
-<?php namespace App\Locker\Repository\Statement;
+<?php namespace Lrs\Tracker\Locker\Repository\Statement;
 
-use App\Locker\Repository\Document\FileTypes as FileTypes;
-use App\Locker\Helpers\Exceptions as Exceptions;
-use App\Locker\Repository\File\Factory as FileFactory;
+use Lrs\Tracker\Locker\Repository\Document\FileTypes as FileTypes;
+use Lrs\Tracker\Locker\Helpers\Exceptions as Exceptions;
+use Lrs\Tracker\Locker\Repository\File\Factory as FileFactory;
 
 class FileAttacher
 {

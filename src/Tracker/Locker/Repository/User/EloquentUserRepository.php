@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Locker\Repository\User;
+namespace Lrs\Tracker\Locker\Repository\User;
 
-use App\Models\Lrs;
-use App\Models\User;
+use Lrs\Tracker\Models\Lrs;
+use Lrs\Tracker\Models\User;
 
 class EloquentUserRepository implements UserRepository
 {

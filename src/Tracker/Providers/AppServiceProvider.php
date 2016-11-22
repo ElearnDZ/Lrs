@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace Lrs\Tracker\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

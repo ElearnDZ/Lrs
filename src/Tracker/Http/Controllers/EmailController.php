@@ -1,7 +1,7 @@
 <?php
-namespace App\Http\Controllers;
+namespace Lrs\Tracker\Http\Controllers;
 
-use App\Locker\Repository\User\UserRepository as User;
+use Lrs\Tracker\Locker\Repository\User\UserRepository as User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Event;

@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace Lrs\Tracker\Http\Middleware;
 
-use App\Locker\Helpers\Helpers;
+use Lrs\Tracker\Locker\Helpers\Helpers;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Locker\Statements\xAPIValidation;
-use App\Locker\Helpers\Exceptions;
+use Lrs\Tracker\Locker\Statements\xAPIValidation;
+use Lrs\Tracker\Locker\Helpers\Exceptions;
 use League\OAuth2\Server\Exception\OAuthException;
 use League\OAuth2\Server\ResourceServer;
 

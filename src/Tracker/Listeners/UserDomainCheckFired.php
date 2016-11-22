@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Listeners;
+namespace Lrs\Tracker\Listeners;
 
-use App\Events\UserDomainCheck;
-use App\Events\UserLogin;
-use App\Models\Site;
+use Lrs\Tracker\Events\UserDomainCheck;
+use Lrs\Tracker\Events\UserLogin;
+use Lrs\Tracker\Models\Site;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
@@ -28,7 +28,7 @@ class UserDomainCheckFired
      */
     public function handle(UserDomainCheck $event)
     {
-        $site = \App\Models\Site::first();
+        $site = \Lrs\Tracker\Models\Site::first();
 
         //has a domain been set?
         if( $site ){

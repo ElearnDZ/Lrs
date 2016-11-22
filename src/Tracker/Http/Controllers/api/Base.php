@@ -1,6 +1,6 @@
 <?php 
 
-namespace App\Http\Controllers\API;
+namespace Lrs\Tracker\Http\Controllers\API;
 
 use \Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Request;
@@ -9,8 +9,8 @@ use \LockerRequest as LockerRequest;
 use \Config as Config;
 use \Route as Route;
 use \DB as DB;
-use App\Locker\Repository\Lrs\EloquentRepository as LrsRepository;
-use App\Locker\Helpers\Helpers as Helpers;
+use Lrs\Tracker\Locker\Repository\Lrs\EloquentRepository as LrsRepository;
+use Lrs\Tracker\Locker\Helpers\Helpers as Helpers;
 
 
 class Base extends Controller

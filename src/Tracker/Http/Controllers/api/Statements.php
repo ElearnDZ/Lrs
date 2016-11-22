@@ -1,10 +1,10 @@
 <?php
-namespace App\Http\Controllers\API;
+namespace Lrs\Tracker\Http\Controllers\API;
 
-use App\Locker\Helpers\Exceptions\Exception;
+use Lrs\Tracker\Locker\Helpers\Exceptions\Exception;
 use Carbon\Carbon;
-use App\Locker\Repository\Query\QueryRepository as QueryRepository;
-use App\Locker\Helpers\Exceptions as Exceptions;
+use Lrs\Tracker\Locker\Repository\Query\QueryRepository as QueryRepository;
+use Lrs\Tracker\Locker\Helpers\Exceptions as Exceptions;
 use Illuminate\Support\Facades\Response;
 
 class Statements extends Base

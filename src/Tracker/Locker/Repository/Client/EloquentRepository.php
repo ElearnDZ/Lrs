@@ -1,11 +1,11 @@
-<?php namespace App\Locker\Repository\Client;
+<?php namespace Lrs\Tracker\Locker\Repository\Client;
 
-use App\Locker\Helpers\Exceptions\NotFound;
-use App\Models\Client;
+use Lrs\Tracker\Locker\Helpers\Exceptions\NotFound;
+use Lrs\Tracker\Models\Client;
 use Jenssegers\Mongodb\Eloquent\Model as Model;
-use App\Locker\Repository\Base\EloquentRepository as BaseRepository;
+use Lrs\Tracker\Locker\Repository\Base\EloquentRepository as BaseRepository;
 use Locker\XApi\Authority as XApiAuthority;
-use App\Locker\Helpers\Helpers as Helpers;
+use Lrs\Tracker\Locker\Helpers\Helpers as Helpers;
 
 class EloquentRepository extends BaseRepository implements Repository
 {

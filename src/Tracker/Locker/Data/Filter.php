@@ -1,4 +1,4 @@
-<?php namespace App\Locker\Data;
+<?php namespace Lrs\Tracker\Locker\Data;
 
 /**
  * Data to display when filtering statements.

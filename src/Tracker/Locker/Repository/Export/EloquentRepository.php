@@ -1,11 +1,11 @@
-<?php namespace App\Locker\Repository\Export;
+<?php namespace Lrs\Tracker\Locker\Repository\Export;
 
-use App\Models\Export;
-use App\Models\Statement;
+use Lrs\Tracker\Models\Export;
+use Lrs\Tracker\Models\Statement;
 use Jenssegers\Mongodb\Eloquent\Model as Model;
-use App\Locker\Repository\Base\EloquentRepository as BaseRepository;
+use Lrs\Tracker\Locker\Repository\Base\EloquentRepository as BaseRepository;
 use Locker\XApi\Helpers as XAPIHelpers;
-use App\Locker\Repository\Report\EloquentRepository as ReportRepository;
+use Lrs\Tracker\Locker\Repository\Report\EloquentRepository as ReportRepository;
 
 class EloquentRepository extends BaseRepository implements Repository
 {

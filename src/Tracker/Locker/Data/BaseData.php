@@ -1,4 +1,4 @@
-<?php namespace App\Locker\Data;
+<?php namespace Lrs\Tracker\Locker\Data;
 
 use Illuminate\Support\Facades\DB;
 

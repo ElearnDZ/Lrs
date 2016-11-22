@@ -1,10 +1,10 @@
 <?php
-namespace App\Http\Controllers;
+namespace Lrs\Tracker\Http\Controllers;
 
 use Event;
-use App\Events\UserDomainCheck;
-use App\Events\UserRegister;
-use App\Locker\Repository\User\UserRepository as User;
+use Lrs\Tracker\Events\UserDomainCheck;
+use Lrs\Tracker\Events\UserRegister;
+use Lrs\Tracker\Locker\Repository\User\UserRepository as User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Input;

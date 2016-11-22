@@ -1,8 +1,8 @@
-<?php namespace App\Locker\Repository\Statement;
+<?php namespace Lrs\Tracker\Locker\Repository\Statement;
 
-use App\Locker\Helpers\Helpers as Helpers;
+use Lrs\Tracker\Locker\Helpers\Helpers as Helpers;
 use Locker\XApi\Statement as XAPIStatement;
-use App\Locker\Helpers\Exceptions as Exceptions;
+use Lrs\Tracker\Locker\Helpers\Exceptions as Exceptions;
 
 interface Storer
 {

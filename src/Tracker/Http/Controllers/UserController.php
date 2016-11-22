@@ -1,9 +1,9 @@
 <?php
-namespace App\Http\Controllers;
+namespace Lrs\Tracker\Http\Controllers;
 
-use App\Locker\Repository\User\UserRepository as User;
-use App\Locker\Repository\Lrs\Repository as Lrs;
-use App\Locker\Helpers\User as UserHelpers;
+use Lrs\Tracker\Locker\Repository\User\UserRepository as User;
+use Lrs\Tracker\Locker\Repository\Lrs\Repository as Lrs;
+use Lrs\Tracker\Locker\Helpers\User as UserHelpers;
 use Illuminate\Support\Facades\Lang;
 
 class UserController extends BaseController

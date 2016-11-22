@@ -1,10 +1,10 @@
 <?php
-namespace App\Http\Controllers;
+namespace Lrs\Tracker\Http\Controllers;
 
-use App\Locker\Repository\Lrs\Repository as LrsRepo;
-use App\Locker\Repository\Report\Repository as ReportRepo;
-use App\Models\Client;
-use App\Models\Site;
+use Lrs\Tracker\Locker\Repository\Lrs\Repository as LrsRepo;
+use Lrs\Tracker\Locker\Repository\Report\Repository as ReportRepo;
+use Lrs\Tracker\Models\Client;
+use Lrs\Tracker\Models\Site;
 
 class ReportingController extends BaseController
 {

@@ -1,8 +1,8 @@
 <?php
-namespace App\Http\Controllers\API;
+namespace Lrs\Tracker\Http\Controllers\API;
 
-use App\Locker\Repository\Query\QueryRepository as Query;
-use App\Locker\Repository\Report\Repository as Report;
+use Lrs\Tracker\Locker\Repository\Query\QueryRepository as Query;
+use Lrs\Tracker\Locker\Repository\Report\Repository as Report;
 use \Response as IlluminateResponse;
 
 class Reports extends Resources

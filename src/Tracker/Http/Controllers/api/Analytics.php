@@ -1,7 +1,7 @@
 <?php
-namespace App\Http\Controllers\API;
+namespace Lrs\Tracker\Http\Controllers\API;
 
-use App\Locker\Data\Analytics as AnalyticsData;
+use Lrs\Tracker\Locker\Data\Analytics as AnalyticsData;
 use \LockerRequest as LockerRequest;
 
 class Analytics extends Base

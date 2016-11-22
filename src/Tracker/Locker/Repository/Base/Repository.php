@@ -1,4 +1,4 @@
-<?php namespace App\Locker\Repository\Base;
+<?php namespace Lrs\Tracker\Locker\Repository\Base;
 
 interface Repository
 {

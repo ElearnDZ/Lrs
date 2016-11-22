@@ -1,7 +1,7 @@
-<?php namespace App\Locker\Data\Dashboards;
+<?php namespace Lrs\Tracker\Locker\Data\Dashboards;
 
-use App\Locker\Data\BaseData;
-use App\Locker\Repository\Lrs\EloquentRepository as LrsRepo;
+use Lrs\Tracker\Locker\Data\BaseData;
+use Lrs\Tracker\Locker\Repository\Lrs\EloquentRepository as LrsRepo;
 use Carbon\Carbon as Carbon;
 use MongoDate;
 

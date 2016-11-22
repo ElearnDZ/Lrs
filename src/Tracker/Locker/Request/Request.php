@@ -1,4 +1,4 @@
-<?php namespace App\Locker;
+<?php namespace Lrs\Tracker\Locker;
 
 class Request
 {

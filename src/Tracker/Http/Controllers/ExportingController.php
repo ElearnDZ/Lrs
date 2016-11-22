@@ -1,8 +1,8 @@
 <?php
-namespace App\Http\Controllers;
+namespace Lrs\Tracker\Http\Controllers;
 
-use App\Locker\Repository\Lrs\Repository as LrsRepo;
-use App\Models\Client;
+use Lrs\Tracker\Locker\Repository\Lrs\Repository as LrsRepo;
+use Lrs\Tracker\Models\Client;
 
 class ExportingController extends BaseController
 {
