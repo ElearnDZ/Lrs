@@ -1,5 +1,5 @@
 <?php
-namespace App\Models;
+namespace Lrs\Tracker\Models;
 use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 
 class Statement extends Eloquent {

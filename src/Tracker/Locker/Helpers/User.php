@@ -1,6 +1,6 @@
-<?php namespace App\Locker\Helpers;
+<?php namespace Lrs\Tracker\Locker\Helpers;
 
-use App\Models\Site;
+use Lrs\Tracker\Models\Site;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;

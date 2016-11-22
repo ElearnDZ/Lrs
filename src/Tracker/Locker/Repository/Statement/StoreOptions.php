@@ -1,4 +1,4 @@
-<?php namespace App\Locker\Repository\Statement;
+<?php namespace Lrs\Tracker\Locker\Repository\Statement;
 
 class StoreOptions extends Options
 {

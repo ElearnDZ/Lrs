@@ -1,4 +1,4 @@
-<?php namespace App\Locker\Listeners;
+<?php namespace Lrs\Tracker\Locker\Listeners;
 
 class LrsHandler
 {

@@ -1,7 +1,7 @@
-<?php namespace App\Locker\Helpers;
+<?php namespace Lrs\Tracker\Locker\Helpers;
 
-use App\Models\Client;
-use App\Models\Lrs;
+use Lrs\Tracker\Models\Client;
+use Lrs\Tracker\Models\Lrs;
 use Illuminate\Support\Facades\App;
 use \Locker\XApi\Atom as XAPIAtom;
 use \Locker\XApi\Errors\Error as XAPIError;

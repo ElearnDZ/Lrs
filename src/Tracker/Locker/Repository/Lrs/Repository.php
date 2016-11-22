@@ -1,6 +1,6 @@
-<?php namespace Locker\Repository\Lrs;
+<?php namespace Lrs\Tracker\Locker\Repository\Lrs;
 
-interface Repository extends \Locker\Repository\Base\Repository
+interface Repository extends \Lrs\Tracker\Locker\Repository\Base\Repository
 {
     public function removeUser($id, $user_id);
 

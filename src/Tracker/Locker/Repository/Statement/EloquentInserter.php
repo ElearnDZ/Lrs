@@ -1,7 +1,7 @@
-<?php namespace App\Locker\Repository\Statement;
+<?php namespace Lrs\Tracker\Locker\Repository\Statement;
 
-use App\Locker\Helpers\Exceptions as Exceptions;
-use App\Locker\Helpers\Helpers as Helpers;
+use Lrs\Tracker\Locker\Helpers\Exceptions as Exceptions;
+use Lrs\Tracker\Locker\Helpers\Helpers as Helpers;
 
 interface Inserter
 {

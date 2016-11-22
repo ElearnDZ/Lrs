@@ -1,4 +1,4 @@
-<?php namespace Locker\Statements;
+<?php namespace Lrs\Tracker\Statements;
 
 class StatementDisplay
 {

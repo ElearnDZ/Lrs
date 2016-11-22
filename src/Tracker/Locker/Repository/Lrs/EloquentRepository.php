@@ -1,13 +1,13 @@
-<?php namespace App\Locker\Repository\Lrs;
+<?php namespace Lrs\Tracker\Locker\Repository\Lrs;
 
-use App\Models\Lrs;
+use Lrs\Tracker\Models\Lrs;
 use Jenssegers\Mongodb\Eloquent\Model as Model;
-use App\Locker\Repository\Base\EloquentRepository as BaseRepository;
+use Lrs\Tracker\Locker\Repository\Base\EloquentRepository as BaseRepository;
 use Locker\XApi\Helpers as XAPIHelpers;
 use App\Locker\Helpers\Helpers as Helpers;
 use \Event as Event;
-use App\Models\Client as ClientModel;
-use App\Models\Statement as StatementModel;
+use Lrs\Tracker\Models\Client as ClientModel;
+use Lrs\Tracker\Models\Statement as StatementModel;
 
 class EloquentRepository extends BaseRepository implements Repository
 {

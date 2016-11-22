@@ -1,8 +1,8 @@
-<?php namespace App\Locker\Repository\Statement;
+<?php namespace Lrs\Tracker\Locker\Repository\Statement;
 
 use Jenssegers\Mongodb\Eloquent\Model as Model;
 use \Illuminate\Database\Eloquent\Collection as Collection;
-use App\Locker\Helpers\Helpers as Helpers;
+use Lrs\Tracker\Locker\Helpers\Helpers as Helpers;
 use Carbon\Carbon as Carbon;
 use MongoDate;
 

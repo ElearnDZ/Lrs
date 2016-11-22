@@ -15,7 +15,7 @@
 |-----------------------------------------------------------------------------------
 */
 
-namespace App\Locker\Statements;
+namespace Lrs\Tracker\Locker\Statements;
 
 class xAPIValidation
 {

@@ -1,10 +1,10 @@
-<?php namespace App\Locker\Repository\Statement;
+<?php namespace Lrs\Tracker\Locker\Repository\Statement;
 
-use App\Models\Statement;
+use Lrs\Tracker\Models\Statement;
 use DB;
 use Jenssegers\Mongodb\Eloquent\Model as Model;
-use App\Locker\Helpers\Helpers as Helpers;
-use App\Locker\Helpers\Exceptions as Exceptions;
+use Lrs\Tracker\Locker\Helpers\Helpers as Helpers;
+use Lrs\Tracker\Locker\Helpers\Exceptions as Exceptions;
 
 abstract class EloquentReader
 {
