@@ -14,7 +14,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"App\\": "src/Tracker/app/",
+			
 			"TincanHttp\\":"src",
 			"Locker\\": "src/Tracker/Locker/",
 			"Lrs\\": "src/Tracker/",
