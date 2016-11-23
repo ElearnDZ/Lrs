@@ -15,7 +15,6 @@
 	"autoload": {
 		"psr-4": {
 			
-			"TincanHttp\\":"src",
 			"Lrs\\": "src/Tracker/",
 			"Controllers\\":"src/Tracker/Http/Controllers/"
 
