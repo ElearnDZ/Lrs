@@ -16,7 +16,7 @@
 		"psr-4": {
 			
 			"TincanHttp\\":"src",
-			"Locker\\": "src/Tracker/Locker/",
+			// "Locker\\": "src/Tracker/Locker/",
 			"Lrs\\": "src/Tracker/",
 			"Controllers\\":"src/Tracker/Http/Controllers/"
 
